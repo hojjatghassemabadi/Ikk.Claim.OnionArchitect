@@ -1,0 +1,4 @@
+.main{
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    animation: showMenu 400ms ease forwards;
+}

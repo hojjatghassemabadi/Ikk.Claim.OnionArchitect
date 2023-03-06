@@ -1,0 +1,70 @@
+<div class="register-parts">
+        <h2>Register Parts</h2>
+        <div class="container">
+                <form class="row g-3 needs-validation" [formGroup]="partform" novalidate>
+                    
+                        <div class="col-md-4">
+                          <label for="validationCustomUsername" class="form-label">Part Name</label>
+                          <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="validationCustomUsername" formControlName="partname" aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback">
+                              Please Enter a name of part.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                                <label for="validationCustomUsername" class="form-label">Part Number</label>
+                                <div class="input-group has-validation">
+                                  <input type="text" class="form-control" id="validationCustomUsername" formControlName="partnumber" aria-describedby="inputGroupPrepend" required>
+                                  <div class="invalid-feedback">
+                                    Please Enter a code of part.
+                                  </div>
+                                </div>
+                              </div>
+                        <div class="col-12">
+                          <div class="form-check">
+                                <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"  formControlName="status" checked>
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>
+                                      </div>
+                            <div class="invalid-feedback">
+                              You must agree before submitting.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <button class="btn btn-primary" type="submit" (click)="onSubmit()"><span *ngIf="editrole">Edit form</span><span  *ngIf="!editrole">Submit form</span></button>
+                        </div>
+                   
+                </form>
+        </div>
+    </div>
+    <div class="recent-parts">
+        <h2>Parts</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Role Name</th>
+                    <th>Status</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let role of rolelist| paginate: { itemsPerPage: itemPerPage, currentPage: p, totalItems: totalRoles }">
+                    <td>{{role.id}}</td>
+                    <td>{{role.name}}</td>
+                    <td class="warning"><a class="pointer" (click)="changeStatus(role.id)"><fa-icon *ngIf="role.status" class="green" [icon]="checked"></fa-icon><fa-icon class="red" *ngIf="!role.status" [icon]="notchecked"></fa-icon></a></td>
+                    <td class="primary">
+                        <a class="pointer" (click)="delete(role.id)"><fa-icon  class="red pointer" [icon]="crash"></fa-icon></a>
+                        <a class="pointer" (click)="get(role.id)"><fa-icon  class="green pointer" [icon]="edit"></fa-icon></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="flex justify-center items-center" >
+            <pagination-controls class="ngx-pagination" (pageChange)="pageChanged($event)"></pagination-controls>
+        </div>
+    </div>
+    
+    

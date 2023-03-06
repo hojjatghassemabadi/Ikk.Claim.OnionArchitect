@@ -1,0 +1,107 @@
+<div class="register-user">
+    <h2>Register New User</h2>
+    <div class="container">
+            <form class="row g-3 needs-validation" [formGroup]="userform" novalidate>
+
+                    <div class="col-md-4">
+                      <label for="validationCustomUsername" class="form-label">Name</label>
+                      <div class="input-group has-validation">
+                        
+                        <input type="text" class="form-control" id="validationCustomUsername" formControlName="name" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                          Please choose a name.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationCustomUsername" class="form-label">Famil</label>
+                      <div class="input-group has-validation">
+                        
+                        <input type="text" class="form-control" id="validationCustomUsername" formControlName="famil" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                          Please choose a Famil.
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <div class="col-md-4">
+                      <label for="validationCustomUsername" class="form-label">Username</label>
+                      <div class="input-group has-validation">
+                        
+                        <input type="text" class="form-control" id="validationCustomUsername" formControlName="userName" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                          Please choose a username.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationCustom03" class="form-label">Password</label>
+                      <input type="text" class="form-control" id="validationCustom03" formControlName="password" required>
+                      <div class="invalid-feedback">
+                        Please provide a valid city.
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCustom04" class="form-label">Roles</label>
+                      <select class="form-select"  multiple="multiple" aria-label="Default select example" formControlName="roles">
+                        <option value="{{rol.id}}" *ngFor="let rol of rolelist" selected>
+                         
+                           
+                               {{rol.name}}
+                             
+                        </option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a Role.
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="col-12">
+                      <div class="form-check">
+                            <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" formControlName="status" id="flexSwitchCheckChecked" checked>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>
+                                  </div>
+                        <div class="invalid-feedback">
+                          You must agree before submitting.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary mr" type="submit" (click)="onSubmit()"><span *ngIf="editUser">Edit form</span><span  *ngIf="!editUser">Submit form</span></button>
+                      <button class="btn btn-danger" type="submit" *ngIf="editUser" (click)="cancel()">Cancel</button>
+                      </div>
+                  </form>
+    </div>
+</div>
+<div class="recent-users">
+    <h2>User List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User Name</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users| paginate: { itemsPerPage: itemPerPage, currentPage: p, totalItems: totalUsers }; let i = index;">
+                <td>{{i+1}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.famil}}</td>
+                <td>{{user.userName}}</td>
+                <td class="warning"><a class="pointer" (click)="changeStatus(user.id)"><fa-icon *ngIf="user.status" class="green" [icon]="checked"></fa-icon><fa-icon class="red" *ngIf="!user.status" [icon]="notchecked"></fa-icon></a></td>
+                <td class="primary">
+                    <a class="pointer" (click)="delete(user.id)"><fa-icon  class="red pointer" [icon]="crash"></fa-icon></a>
+                    <a class="pointer" (click)="get(user.id)"><fa-icon  class="green pointer" [icon]="edit"></fa-icon></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="flex justify-center items-center" >
+        <pagination-controls class="ngx-pagination" (pageChange)="pageChanged($event)"></pagination-controls>
+    </div>
+</div>
+

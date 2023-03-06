@@ -1,0 +1,522 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Presentation.WebApi\\Ikk.Claims.Presentation.WebApi.csproj": {}
+  },
+  "projects": {
+    "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application.Contracts\\Ikk.Claims.Application.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application.Contracts\\Ikk.Claims.Application.Contracts.csproj",
+        "projectName": "Ikk.Claims.Application.Contracts",
+        "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application.Contracts\\Ikk.Claims.Application.Contracts.csproj",
+        "packagesPath": "C:\\Users\\86516259\\.nuget\\packages\\",
+        "outputPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\86516259\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Common\\Ikk.Claims.Common.csproj": {
+                "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Common\\Ikk.Claims.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.27.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application\\Ikk.Claims.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application\\Ikk.Claims.Application.csproj",
+        "projectName": "Ikk.Claims.Application",
+        "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application\\Ikk.Claims.Application.csproj",
+        "packagesPath": "C:\\Users\\86516259\\.nuget\\packages\\",
+        "outputPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\86516259\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Common\\Ikk.Claims.Common.csproj": {
+                "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Common\\Ikk.Claims.Common.csproj"
+              },
+              "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Domain\\Ikk.Claims.Domain.csproj": {
+                "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Domain\\Ikk.Claims.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Common\\Ikk.Claims.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Common\\Ikk.Claims.Common.csproj",
+        "projectName": "Ikk.Claims.Common",
+        "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Common\\Ikk.Claims.Common.csproj",
+        "packagesPath": "C:\\Users\\86516259\\.nuget\\packages\\",
+        "outputPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\86516259\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Domain\\Ikk.Claims.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Domain\\Ikk.Claims.Domain.csproj",
+        "projectName": "Ikk.Claims.Domain",
+        "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Domain\\Ikk.Claims.Domain.csproj",
+        "packagesPath": "C:\\Users\\86516259\\.nuget\\packages\\",
+        "outputPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\86516259\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application.Contracts\\Ikk.Claims.Application.Contracts.csproj": {
+                "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application.Contracts\\Ikk.Claims.Application.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.Core\\Ikk.Claims.Infrastructure.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.Core\\Ikk.Claims.Infrastructure.Core.csproj",
+        "projectName": "Ikk.Claims.Infrastructure.Core",
+        "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.Core\\Ikk.Claims.Infrastructure.Core.csproj",
+        "packagesPath": "C:\\Users\\86516259\\.nuget\\packages\\",
+        "outputPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\86516259\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application\\Ikk.Claims.Application.csproj": {
+                "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application\\Ikk.Claims.Application.csproj"
+              },
+              "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.EfCore\\Ikk.Claims.Infrastructure.EfCore.csproj": {
+                "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.EfCore\\Ikk.Claims.Infrastructure.EfCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0-preview.1.23110.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.EfCore\\Ikk.Claims.Infrastructure.EfCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.EfCore\\Ikk.Claims.Infrastructure.EfCore.csproj",
+        "projectName": "Ikk.Claims.Infrastructure.EfCore",
+        "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.EfCore\\Ikk.Claims.Infrastructure.EfCore.csproj",
+        "packagesPath": "C:\\Users\\86516259\\.nuget\\packages\\",
+        "outputPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.EfCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\86516259\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application\\Ikk.Claims.Application.csproj": {
+                "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application\\Ikk.Claims.Application.csproj"
+              },
+              "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Domain\\Ikk.Claims.Domain.csproj": {
+                "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Domain\\Ikk.Claims.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Presentation.WebApi\\Ikk.Claims.Presentation.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Presentation.WebApi\\Ikk.Claims.Presentation.WebApi.csproj",
+        "projectName": "Ikk.Claims.Presentation.WebApi",
+        "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Presentation.WebApi\\Ikk.Claims.Presentation.WebApi.csproj",
+        "packagesPath": "C:\\Users\\86516259\\.nuget\\packages\\",
+        "outputPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Presentation.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\86516259\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application.Contracts\\Ikk.Claims.Application.Contracts.csproj": {
+                "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Application.Contracts\\Ikk.Claims.Application.Contracts.csproj"
+              },
+              "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.Core\\Ikk.Claims.Infrastructure.Core.csproj": {
+                "projectPath": "E:\\teamproject\\IKK.Claim\\IKK.Claims\\IKK.Claims\\Ikk.Claims.Infrastructure.Core\\Ikk.Claims.Infrastructure.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.27.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

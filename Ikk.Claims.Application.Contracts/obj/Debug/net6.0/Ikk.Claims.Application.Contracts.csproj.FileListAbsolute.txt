@@ -1,0 +1,15 @@
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\obj\Debug\net6.0\Ikk.Claims.Application.Contracts.csproj.AssemblyReference.cache
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\obj\Debug\net6.0\Ikk.Claims.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\obj\Debug\net6.0\Ikk.Claims.Application.Contracts.AssemblyInfoInputs.cache
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\obj\Debug\net6.0\Ikk.Claims.Application.Contracts.AssemblyInfo.cs
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\obj\Debug\net6.0\Ikk.Claims.Application.Contracts.csproj.CoreCompileInputs.cache
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\bin\Debug\net6.0\Ikk.Claims.Application.Contracts.deps.json
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\bin\Debug\net6.0\Ikk.Claims.Application.Contracts.dll
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\bin\Debug\net6.0\Ikk.Claims.Application.Contracts.pdb
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\bin\Debug\net6.0\Ikk.Claims.Common.dll
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\bin\Debug\net6.0\Ikk.Claims.Common.pdb
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\obj\Debug\net6.0\Ikk.Claims.Application.Contracts.csproj.CopyComplete
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\obj\Debug\net6.0\Ikk.Claims.Application.Contracts.dll
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\obj\Debug\net6.0\refint\Ikk.Claims.Application.Contracts.dll
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\obj\Debug\net6.0\Ikk.Claims.Application.Contracts.pdb
+E:\teamproject\IKK.Claim\IKK.Claims\IKK.Claims\Ikk.Claims.Application.Contracts\obj\Debug\net6.0\ref\Ikk.Claims.Application.Contracts.dll

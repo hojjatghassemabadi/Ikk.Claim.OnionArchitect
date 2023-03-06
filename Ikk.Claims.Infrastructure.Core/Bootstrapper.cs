@@ -13,6 +13,18 @@ using Ikk.Claims.Application.RoleApplications;
 using Ikk.Claims.Application.Contracts.Rolecontract;
 using Ikk.Claims.Common.Infrastructure;
 using Ikk.Claims.Infrastructure.EfCore.Repositories;
+using Ikk.Claims.Domain.Enities.Parts;
+using Ikk.Claims.Infrastructure.EfCore.Repositories.Parts;
+using Ikk.Claims.Application.PartApplication;
+using Ikk.Claims.Application.Contracts.PartContracts;
+using Ikk.Claims.Domain.Enities.TypeCars;
+using Ikk.Claims.Domain.Enities.Batchs;
+using Ikk.Claims.Infrastructure.EfCore.Repositories.Batchs;
+using Ikk.Claims.Infrastructure.EfCore.Repositories.TypeCars;
+using Ikk.Claims.Application.Contracts.TypeCarContract;
+using Ikk.Claims.Application.Contracts.BatchContract;
+using Ikk.Claims.Application.TypeCarApplication;
+using Ikk.Claims.Application.BatchApplication;
 
 namespace Ikk.Claims.Infrastructure.Core
 {
@@ -24,7 +36,15 @@ namespace Ikk.Claims.Infrastructure.Core
             services.AddTransient<IUsersApplication, UsersApplication>();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IRoleRepository, RoleRepository>();
+            services.AddTransient<IPartRepository, PartRepository>();
+            services.AddTransient<ITypeCarRepository, TypeCarRepository>();
+            services.AddTransient<IBatchRepository, BatchRepository>();
+
             services.AddTransient<IRoleApplication, RoleApplication>();
+            services.AddTransient<IPartApplication, PartApplication>();
+            services.AddTransient<ITypeCarApplication, TypeCarApplication>();
+            services.AddTransient<IBatchApplication, BatchApplication>();
+
             services.AddTransient<IUserInRoleRepository, UserInRoleRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
         }

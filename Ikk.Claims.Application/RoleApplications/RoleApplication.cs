@@ -61,7 +61,8 @@ namespace Ikk.Claims.Application.RoleApplications
 
         public void Remove(long id)
         {
-            _unitOfWork.BeginTran();           var role = _roleRepository.Get(id);
+            _unitOfWork.BeginTran();
+           var role = _roleRepository.Get(id);
            role.Remove(1, DateTime.Now);
             _unitOfWork.CommitTran();
         }

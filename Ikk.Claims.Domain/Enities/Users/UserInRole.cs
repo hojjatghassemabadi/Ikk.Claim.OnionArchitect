@@ -6,6 +6,7 @@ namespace Ikk.Claims.Domain.Entities.Users
 {
 
     public class UserInRole {
+        
         public long Id { get; private set; }
         public long UserId { get; private set; }
         public virtual User User { get; set; }

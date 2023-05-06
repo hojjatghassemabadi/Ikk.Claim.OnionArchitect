@@ -1,1 +1,158 @@
-<p>register-claim works!</p>
+<div class="register-claim">
+    <h2>Register claim Card</h2>
+    <div class="container tabcotent">
+            <form class="row g-3 needs-validation" [formGroup]="claimform" novalidate>
+                    <div class="row">
+                            <div class="col-md-4">
+                            <label for="claimNumber" class="form-label" >claim Number</label>
+                            <div class="input-group has-validation">
+                                <input type="text" class="form-control" [disabled]="true" (change)="onEditclaim($event)" id="claimNumber" formControlName="ClaemNumber" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                Please Enter a name of claim.
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="Date" class="form-label">Date</label>
+                                <div class="input-group">
+                                        <input
+                                            class="form-control"
+                                            formControlName="DateRegister"
+                                            placeholder="yyyy-mm-dd"
+                                            name="dp"
+                                            ngbDatepicker
+                                            #d="ngbDatepicker"
+                                        />
+                                        <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-4">
+                                <label for="partcode" class="form-label">Part Code</label>
+                                <div class="input-group has-validation">
+                                <input type="text" class="form-control" (keyup)="searchpart($event)" list="partslist" id="partcode" formControlName="PartId" aria-describedby="inputGroupPrepend" required>
+                                <datalist id="partslist">
+                                        <option *ngFor="let p of partList" [value]="p.partNumber" >{{p.partName}}</option>
+                                </datalist>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                    <label for="partname" class="form-label">Part Name</label>
+                                    <div class="input-group has-validation">
+                                    <input type="text" class="form-control" [disabled]="true" formControlName="PartName" id="partname" aria-describedby="inputGroupPrepend">
+                                    <div class="invalid-feedback">
+                                        Please Enter a name of claim.
+                                    </div>
+                                    </div>
+                                </div>
+                            <div class="col-md-4">
+                                <label for="CountPart" class="form-label">CountPart</label>
+                                <div class="input-group has-validation">
+                                <input type="text" class="form-control" id="CountPart" formControlName="CountPart" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please Enter a name of claim.
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                    <label for="batchnumber" class="form-label">Batch Number</label>
+                                    <div class="input-group has-validation">
+                                    <input type="text" class="form-control" (keyup)="searchBatch($event)" list="batchslist" id="batchnumber" formControlName="BatchId" aria-describedby="inputGroupPrepend" required>
+                                    <datalist id="batchslist">
+                                            <option *ngFor="let b of batchList" [value]="b.name" >{{b.name}}</option>
+                                    </datalist>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                        <label for="carmodel" class="form-label">Car Model</label>
+                                        <div class="input-group has-validation">
+                                        <input type="text" class="form-control" [disabled]="true" formControlName="CarModel" id="carmodel"  aria-describedby="inputGroupPrepend" >
+                                       
+                                        </div>
+                                    </div>
+                            <div class="col-md-4">
+                                <label for="Country" class="form-label">Country</label>
+                                <div class="input-group has-validation">
+                                <input type="text" [disabled]="true" class="form-control" value="Iran" formControlName="Country" id="Country"  aria-describedby="inputGroupPrepend" >
+                                <div class="invalid-feedback">
+                                    Please Enter a name of claim.
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                    <label for="company" class="form-label">Company</label>
+                                    <div class="input-group has-validation">
+                                      <input type="text" [disabled]="true" class="form-control" formControlName="Company" id="company" value="IKKCo" aria-describedby="inputGroupPrepend" >
+                                      <div class="invalid-feedback">
+                                        Please Enter a name of claim.
+                                      </div>
+                                    </div>
+                                  </div>
+                      </div>
+                      <div class="row">
+                      <div class="col">
+                        <label for="desc" class="form-label">Describtion</label>
+                        <div class="input-group has-validation">
+                          <textarea type="text" class="form-control" id="desc" formControlName="Desc" aria-describedby="inputGroupPrepend" ></textarea>
+                          <div class="invalid-feedback">
+                            Please Enter a name of claim.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        
+                            <div class="col-6">
+                              <label for="validationCustomUsername" class="form-label">Upload Pictures</label>
+                              <div class="input-group has-validation">
+                                <input type="file" accept="image/*" (change)="onselectImage($event)"multiple class="form-control" >
+                              </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col imagebox" *ngFor="let url of urls"> 
+                                        <img class="imginbox" [src]="url.address" height="100px" width="100px"/>
+                                        <fa-icon  class="red pointer iconinbox" [icon]="crash" (click)="deleteImage(url)"></fa-icon>
+                                        <fa-icon  class="green pointer iconinbox2" [icon]="download" (click)="downloadImage(url)"></fa-icon>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit" *ngIf="!uploading" (click)="onSubmit()"><span *ngIf="editclaim">Edit form</span><span  *ngIf="!editclaim">Submit form</span></button>
+                      <button class="btn btn-warning" type="submit" *ngIf="uploading">Save data...</button>
+                      <button class="btn btn-danger" type="submit" (click)="CancelEdit()" *ngIf="editclaim">Cancel</button>
+
+                    </div>
+                    
+               
+            </form>
+    </div>
+</div>
+<div class="recent-claim">
+    <h2>claims</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>claim Name</th>
+                <th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let claim of claimlist| paginate: { itemsPerPage: itemPerPage, currentPage: p, totalItems: totalclaims }">
+                <td>{{claim.id}}</td>
+                <td>{{claim.name}}</td>
+                <td class="primary">
+                    <a class="pointer" (click)="delete(claim.id)"><fa-icon  class="red pointer" [icon]="crash"></fa-icon></a>
+                    <a class="pointer" (click)="get(claim.id)"><fa-icon  class="green pointer" [icon]="edit"></fa-icon></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="flex justify-center items-center" >
+        <pagination-controls class="ngx-pagination" (pageChange)="pageChanged($event)"></pagination-controls>
+    </div>
+</div>
+

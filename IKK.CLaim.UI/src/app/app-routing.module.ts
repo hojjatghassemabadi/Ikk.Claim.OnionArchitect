@@ -7,34 +7,45 @@ import { UsersComponent } from 'src/app/components/dashboard/UserManagement/user
 import { RolesComponent } from './components/dashboard/UserManagement/roles/roles.component';
 import { AccessComponent } from './components/dashboard/UserManagement/access/access.component';
 import { PartDeclarationComponent } from './components/dashboard/part-declaration/part-declaration.component';
-import { BachNumbersComponent } from './components/dashboard/bach-numbers/bach-numbers.component';
 import { RegisterClaimComponent } from './components/dashboard/register-claim/register-claim.component';
 import { RegisterCKDQRComponent } from './components/dashboard/register-ckdqr/register-ckdqr.component';
 import { RegisterCCLRCLComponent } from './components/dashboard/register-cclrcl/register-cclrcl.component';
 import { RegisterPackingListComponent } from './components/dashboard/register-packing-list/register-packing-list.component';
+import { CarDeclarationComponent } from './components/dashboard/car-declaration/car-declaration.component';
+import { AnalyzCKDQRComponent } from './components/dashboard/analyz-ckdqr/analyz-ckdqr.component';
+import { BaseInfoComponent } from './components/dashboard/base-info/base-info.component';
+import { BachNumbersComponent } from './components/dashboard/base-info/bach-numbers/bach-numbers.component';
 
 const routes: Routes = [ 
 {path:"dashboard",component:DashboardComponent,canActivate:[AuthGuard],
- children:[{
-  path:'users',
-  component:UsersComponent
-  
- },{
-  path:'roles',
-  component:RolesComponent
- }
- ,{
-  path:'Access',
-  component:AccessComponent
- }
- ,{
-  path:'PartDeclaration',
-  component:PartDeclarationComponent
- }
- ,{
-  path:'BatchNumber',
-  component:BachNumbersComponent
- }
+ children:[
+              {
+                path:'baseInfo',component:BaseInfoComponent,canActivate:[AuthGuard],
+                children:[{
+                  path:'batchs',
+                  component:BachNumbersComponent
+                  },
+                  {
+                    path:'users',
+                    component:UsersComponent
+                    },
+                  {
+                    path:'roles',
+                    component:RolesComponent
+                  },
+                  {
+                    path:'Access',
+                    component:AccessComponent
+                  },
+                  {
+                    path:'PartDeclaration',
+                    component:PartDeclarationComponent
+                  },
+                  {
+                    path:'CarDeclaration',
+                    component:CarDeclarationComponent
+                  }
+  ]}
  ,{
   path:'RegisterClaim',
   component:RegisterClaimComponent
@@ -42,6 +53,10 @@ const routes: Routes = [
  ,{
   path:'RegisterCKDQR',
   component:RegisterCKDQRComponent
+ }
+ ,{
+  path:'AnalyzCKDQR',
+  component:AnalyzCKDQRComponent
  }
  ,{
   path:'RegisterCCLRCL',

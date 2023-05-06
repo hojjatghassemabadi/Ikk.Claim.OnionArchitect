@@ -11,8 +11,8 @@ namespace Ikk.Claims.Infrastructure.EfCore.Repositories
 {
     public class UnitOfWork:IUnitOfWork
     {
-        private readonly ClaimContext _context;
-        public UnitOfWork(ClaimContext context)
+        private readonly ClaemContext _context;
+        public UnitOfWork(ClaemContext context)
         {
             _context = context;
         }

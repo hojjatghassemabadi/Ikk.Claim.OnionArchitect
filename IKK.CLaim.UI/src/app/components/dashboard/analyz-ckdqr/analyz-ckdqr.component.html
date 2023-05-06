@@ -1,0 +1,599 @@
+<div class="register-AnalyzCkdqr-main">
+        <div class="register-AnalyzCkdqr">
+                <h2>CKDQR List</h2>
+                <div class="container">
+                        <div class="recent-claim">
+                               
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>claim Number</th>
+                                            <th>Date</th>
+                                            <th>Part Number</th>
+                                            <th>Part Name</th>
+                                            <th>Countity</th>
+                                            <th>Batch Number</th>
+                                            <th>TypeCar</th>
+                                            <th>operation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let ckdqr of cqdqrlist| paginate: { itemsPerPage: itemPerPage, currentPage: p, totalItems: totalckdqrs }">
+                                            <td>{{ckdqr.id}}</td>
+                                            <td>{{ckdqr.name}}</td>
+                                            <td>{{ckdqr.name}}</td>
+                                            <td>{{ckdqr.name}}</td>
+                                            <td>{{ckdqr.name}}</td>
+                                            <td>{{ckdqr.name}}</td>
+                                            <td>{{ckdqr.name}}</td>
+                                            <td>{{ckdqr.name}}</td>
+                                            <td class="primary">
+                                                <a class="pointer" ><fa-icon  class="red pointer" [icon]="crash"></fa-icon></a>
+                                                <a class="pointer" ><fa-icon  class="green pointer" [icon]="edit"></fa-icon></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="flex justify-center items-center" >
+                                     <pagination-controls class="ngx-pagination" (pageChange)="pageChanged($event)"></pagination-controls> 
+                                </div>
+                            </div> 
+                </div>
+            </div>
+        <div class="register-AnalyzCkdqr">
+                <h2>Analyz CKDQR</h2>
+                <div class="container">
+                        <form class="row g-3 needs-validation" [formGroup]="Analyzckdqrform" novalidate>
+                                <div class="row">
+                                        <div class="col-md-4">
+                                        <label for="validationCustomUsername" class="form-label">SN CKDQR</label>
+                                        <div class="input-group has-validation">
+                                            <input type="text" class="form-control" id="validationCustomUsername" value="IR-100-200" formControlName="ClaemNumber" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                            Please Enter a name of claim.
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Type Of Claim</label>
+                                           
+                                                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Logistic
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        QC
+                                                    </label>
+                                                </div>
+                                           
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Report Number</label>
+                                            <div class="input-group has-validation">
+                                            <input type="text" class="form-control" id="validationCustomUsername" formControlName="PartId" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please Enter a name of claim.
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <label for="validationCustomUsername" class="form-label">Overseas Factory</label>
+                                                <div class="input-group has-validation">
+                                                <input type="text" class="form-control" id="validationCustomUsername" formControlName="PartId" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter a name of claim.
+                                                </div>
+                                                </div>
+                                            </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Country</label>
+                                            <div class="input-group has-validation">
+                                            <input type="text" class="form-control" id="validationCustomUsername" formControlName="CountPart" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please Enter a name of claim.
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Date</label>
+                                            <div class="input-group has-validation">
+                                            <input type="text" class="form-control" id="validationCustomUsername" formControlName="BatchId" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please Enter a name of claim.
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Solar Date</label>
+                                            <div class="input-group has-validation">
+                                            <input type="text" class="form-control" id="validationCustomUsername" formControlName="Country" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please Enter a name of claim.
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <label for="validationCustomUsername" class="form-label">Model</label>
+                                                <div class="input-group has-validation">
+                                                  <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                  <div class="invalid-feedback">
+                                                    Please Enter a name of claim.
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Part Name</label>
+                                            <div class="input-group has-validation">
+                                                <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                Please Enter a name of claim.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Material Number</label>
+                                            <div class="input-group has-validation">
+                                                <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter a name of claim.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Quantity</label>
+                                            <div class="input-group has-validation">
+                                                <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter a name of claim.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Container No</label>
+                                            <div class="input-group has-validation">
+                                                <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter a name of claim.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <label for="validationCustomUsername" class="form-label">Batch No</label>
+                                                <div class="input-group has-validation">
+                                                    <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                    <div class="invalid-feedback">
+                                                        Please Enter a name of claim.
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <label for="validationCustomUsername" class="form-label">Case No</label>
+                                                <div class="input-group has-validation">
+                                                    <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                    <div class="invalid-feedback">
+                                                        Please Enter a name of claim.
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="row">
+                                        
+                                        <div class="col-md-4">
+                                                <label for="validationCustomUsername" class="form-label">Packing Status</label>
+                                               
+                                                    
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            No Damaged
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                            Damaged
+                                                        </label>
+                                                    </div>
+                                               
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Overseas Plant Action</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    Replace
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    Rework
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Others
+                                                    </label>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <label for="validationCustomUsername" class="form-label">Responsibility</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Haima
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        IKKCo
+                                                    </label>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                                <label for="validationCustomUsername" class="form-label">Urgency Classification</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Urgent(Bt Air)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Common(By shipping)
+                                                    </label>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <label for="validationCustomUsername" class="form-label">Attachment</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Photos
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Part
+                                                    </label>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <label for="validationCustomUsername" class="form-label">Warranty</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        No
+                                                    </label>
+                                                </div>
+                                        </div>
+                                  </div>
+                                  <hr/>
+                                  <div class="row">
+                                        
+                                                <label for="validationCustomUsername" class="form-label">Problem Type</label>
+                                                <div class="form-check col">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Shortage(ST)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check col">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Wrong Shipment
+                                                    </label>
+                                                </div>
+                                                <div class="form-check col">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                            Part Defect (PD)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check col">
+                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                                Assembly Quality (AQ)
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check col">
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                                    Function Quality (FQ)
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check col">
+                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                                        Package Quality (PQ)
+                                                                    </label>
+                                                                </div>
+                                        
+                                  </div>
+                                  <div class="row">
+                                        <div class="col">
+                                          <label for="validationCustomUsername" class="form-label">Details</label>
+                                          <div class="input-group has-validation">
+                                            <textarea type="text" class="form-control" id="validationCustomUsername" formControlName="Desc" aria-describedby="inputGroupPrepend" ></textarea>
+                                            <div class="invalid-feedback">
+                                              Please Enter a name of claim.
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                      <hr/>
+                                  <div class="row">
+                                      <label>
+                                          if this part is maximum claim of batch, below items to calculate lost production orginate from Haima:
+                                      </label>
+                                      <div class="col-md-3">
+                                            <label for="validationCustomUsername" class="form-label">QTY IN BOM(Each Car)</label>
+                                            <div class="input-group has-validation">
+                                                <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter a name of claim.
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                            <label for="validationCustomUsername" class="form-label">Lost Production(Cars)</label>
+                                            <div class="input-group has-validation">
+                                                <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter a name of claim.
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                            <label for="validationCustomUsername" class="form-label">Lost Production(Container)</label>
+                                            <div class="input-group has-validation">
+                                                <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter a name of claim.
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                            <label for="validationCustomUsername" class="form-label">Demurrage</label>
+                                            <div class="input-group has-validation">
+                                                <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter a name of claim.
+                                                </div>
+                                            </div>
+                                    </div>
+                                  </div>
+                                  <hr/>
+                                  <div class="row">
+                                        <div class="col-md-4">
+                                                <label for="validationCustomUsername" class="form-label">how parts have to be dealt it: </label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    Rework
+                                                </label>
+                                            </div>
+                                            <div class="form-check col-md-2">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Scrap
+                                                    </label>
+                                                </div>
+                                                <div class="form-check col-md-2">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                            Others
+                                                        </label>
+                                                    </div>
+                                  </div>
+                                  <hr/>
+                                  <div class="row">
+                                        <div class="col-md-2">
+                                                <label for="validationCustomUsername" class="form-label">Preliminary Quality Responsibility (By Haima) </label>
+                                        </div>
+                                        <div class="col-md-2">
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                產品設計不佳
+                                                        </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                海馬包裝 保護不良
+                                                        </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                海馬包裝防護面表
+                                                        </label>
+                                                </div>
+                                        </div>
+                                        
+                                        <div class="col-md-2">
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                海馬最錯誤
+                                                        </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                物流發貨錯誤
+                                                        </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                自電影來件錯誤
+                                                        </label>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                有缺陷的製造零件
+                                                        </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                包裝供應商有問題
+                                                        </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                海馬包裝 保護不
+                                                        </label>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                產品設計不佳
+                                                        </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                物流發貨錯誤
+                                                        </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                自電影來件錯誤
+                                                        </label>
+                                                </div>
+                                        </div>
+                                  </div>
+                                  <hr/>
+                                  <div class="row">
+                                        <label>
+                                            Rework Detail
+                                        </label>
+                                        <div class="col-md-3">
+                                              <label for="validationCustomUsername" class="form-label">Spare Part Number</label>
+                                              <div class="input-group has-validation">
+                                                  <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                  <div class="invalid-feedback">
+                                                      Please Enter a name of claim.
+                                                  </div>
+                                              </div>
+                                      </div>
+                                      <div class="col-md-3">
+                                              <label for="validationCustomUsername" class="form-label">Spare Part Name</label>
+                                              <div class="input-group has-validation">
+                                                  <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                  <div class="invalid-feedback">
+                                                      Please Enter a name of claim.
+                                                  </div>
+                                              </div>
+                                      </div>
+                                      <div class="col-md-3">
+                                              <label for="validationCustomUsername" class="form-label">Quantity</label>
+                                              <div class="input-group has-validation">
+                                                  <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                  <div class="invalid-feedback">
+                                                      Please Enter a name of claim.
+                                                  </div>
+                                              </div>
+                                      </div>
+                                      <div class="col-md-3">
+                                              <label for="validationCustomUsername" class="form-label">Total Rework Time (min)</label>
+                                              <div class="input-group has-validation">
+                                                  <input type="text" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                  <div class="invalid-feedback">
+                                                      Please Enter a name of claim.
+                                                  </div>
+                                              </div>
+                                      </div>
+                                      </div>
+                                    <hr/>
+                                      <div class="row">
+                                      <div class="col-md-3">
+                                            <label for="validationCustomUsername" class="form-label">Rework Method</label>
+                                            <div class="input-group has-validation">
+                                                <input type="file" class="form-control" id="validationCustomUsername" formControlName="Company" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter a name of claim.
+                                                </div>
+                                            </div>
+                                    </div>
+                                    </div>
+                                    <hr/>
+                                <div class="row">
+                                        <div class="col">
+                                          <label for="validationCustomUsername" class="form-label">Upload Pictures</label>
+                                          <div class="input-group has-validation">
+                                            <input type="file" accept="image/*" class="form-control" id="validationCustomUsername" formControlName="Desc" aria-describedby="inputGroupPrepend" >
+                                            <div class="invalid-feedback">
+                                              Please Enter a name of claim.
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                <div class="col-12">
+                                  <button class="btn btn-primary" type="submit" (click)="onSubmit()"><span *ngIf="editckdqr">Edit form</span><span  *ngIf="!editckdqr">Submit form</span></button>
+                                </div>
+                           
+                        </form>
+                </div>
+            </div>
+            <div class="recent-ckdqr">
+                <h2>CKDQRs</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>claim Name</th>
+                            <th>Operation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let ckdqr of cqdqrlist| paginate: { itemsPerPage: itemPerPage, currentPage: p, totalItems: totalckdqrs }">
+                            <td>{{ckdqr.id}}</td>
+                            <td>{{ckdqr.name}}</td>
+                            <td class="primary">
+                                <a class="pointer" ><fa-icon  class="red pointer" [icon]="crash"></fa-icon></a>
+                                <a class="pointer" ><fa-icon  class="green pointer" [icon]="edit"></fa-icon></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="flex justify-center items-center" >
+                    <!-- <pagination-controls class="ngx-pagination" (pageChange)="pageChanged($event)"></pagination-controls> -->
+                </div>
+            </div>
+            
+        </div>

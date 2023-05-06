@@ -25,6 +25,12 @@ using Ikk.Claims.Application.Contracts.TypeCarContract;
 using Ikk.Claims.Application.Contracts.BatchContract;
 using Ikk.Claims.Application.TypeCarApplication;
 using Ikk.Claims.Application.BatchApplication;
+using Ikk.Claims.Application.Contracts.ClaemContracts;
+using Ikk.Claims.Application.CleamApplications;
+using Ikk.Claims.Domain.Enities.Claems;
+using Ikk.Claims.Infrastructure.EfCore.Repositories.Claems;
+using Ikk.Claims.Application.BatchApplications;
+using Ikk.Claims.Application.Contracts.CarInBatchContracts;
 
 namespace Ikk.Claims.Infrastructure.Core
 {
@@ -32,7 +38,7 @@ namespace Ikk.Claims.Infrastructure.Core
     {
         public static void Config(IServiceCollection services, string ConnectionString)
         {
-            services.AddEntityFrameworkSqlServer().AddDbContext<ClaimContext>(options => options.UseSqlServer(ConnectionString));
+            services.AddEntityFrameworkSqlServer().AddDbContext<ClaemContext>(options => options.UseSqlServer(ConnectionString));
             services.AddTransient<IUsersApplication, UsersApplication>();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IRoleRepository, RoleRepository>();
@@ -44,7 +50,12 @@ namespace Ikk.Claims.Infrastructure.Core
             services.AddTransient<IPartApplication, PartApplication>();
             services.AddTransient<ITypeCarApplication, TypeCarApplication>();
             services.AddTransient<IBatchApplication, BatchApplication>();
-
+            services.AddTransient<ICarInBatchApplication, CarInBatchApplication>();
+            services.AddTransient<ICarInBatchRepository, CarInBatchRepository>();
+            services.AddTransient<IClaemApplication, ClaimApplication>();
+            services.AddTransient<IClaemRepository, ClaemRepository>();
+            services.AddTransient<IClaemPicsRepositoy, ClaemPicsRepository>();
+            services.AddTransient<IClaemInPartRepository, ClaemInRepository>();
             services.AddTransient<IUserInRoleRepository, UserInRoleRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
         }

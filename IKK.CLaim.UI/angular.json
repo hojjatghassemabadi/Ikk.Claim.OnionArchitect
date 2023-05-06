@@ -23,12 +23,12 @@
               "src/assets"
             ],
             "styles": [
-             "./node_modules/ngx-toastr/toastr.css",
+              "./node_modules/ngx-toastr/toastr.css",
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/bootstrap-toggle/css/bootstrap-toggle.min.css",
-              "./node_modules/bootstrap/dist/css/bootstrap-multiselect.css"
-
+              "./node_modules/bootstrap/dist/css/bootstrap-multiselect.css",
+              "./node_modules/@syncfusion/ej2-material-theme/styles/material.css"
             ],
             "scripts": [
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
@@ -41,13 +41,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "1mb",
                   "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "150kb",
+                  "maximumError": "150kb"
                 }
               ],
               "fileReplacements": [
@@ -103,7 +103,8 @@
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/bootstrap-toggle/css/bootstrap-toggle.min.css",
-              "./node_modules/bootstrap/dist/css/bootstrap-multiselect.css"
+              "./node_modules/bootstrap/dist/css/bootstrap-multiselect.css",
+              "./node_modules/@syncfusion/ej2-material-theme/styles/material.css"
             ],
             "scripts": [
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",

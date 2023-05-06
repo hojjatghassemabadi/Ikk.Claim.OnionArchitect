@@ -13,8 +13,8 @@ namespace Ikk.Claims.Infrastructure.EfCore.Repositories.Batchs
 {
     public class BatchRepository : BaseRepository<long, Batch>, IBatchRepository
     {
-        private readonly ClaimContext _context;
-        public BatchRepository(ClaimContext context) : base(context)
+        private readonly ClaemContext _context;
+        public BatchRepository(ClaemContext context) : base(context)
         {
             _context=context;
         }

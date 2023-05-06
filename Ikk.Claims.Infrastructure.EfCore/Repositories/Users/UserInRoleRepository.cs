@@ -13,9 +13,9 @@ namespace Ikk.Claims.Infrastructure.EfCore.Repositories.Users
 {
     public class UserInRoleRepository :BaseRepository<long,UserInRole>, IUserInRoleRepository
     {
-        private readonly ClaimContext _context;
+        private readonly ClaemContext _context;
 
-        public UserInRoleRepository(ClaimContext context) : base(context)
+        public UserInRoleRepository(ClaemContext context) : base(context)
         {
             _context = context;
         }

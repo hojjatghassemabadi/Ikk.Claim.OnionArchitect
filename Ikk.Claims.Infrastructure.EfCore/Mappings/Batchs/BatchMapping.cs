@@ -1,4 +1,5 @@
 ﻿using Ikk.Claims.Domain.Enities.Batchs;
+using Ikk.Claims.Domain.Enities.Claems;
 using Ikk.Claims.Domain.Enities.TypeCars;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,8 @@ namespace Ikk.Claims.Infrastructure.EfCore.Mappings.Batchs
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name);
             builder.Property(x => x.Status);
-            builder.HasOne(x => x.TypeCar).WithOne(x => x.Batch).HasForeignKey<TypeCar>(x => x.BatchId);
+            builder.HasMany(x => x.CarInBatchs).WithOne(x => x.Batch).HasForeignKey(x => x.BatchId);
+            builder.HasMany(x => x.Claims).WithOne(x => x.Batch);
         }
     }
 }

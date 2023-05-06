@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import * as Icons from '@fortawesome/free-solid-svg-icons';
+import { PartsService } from '../../../services/parts.service';
 import { FormBuilder, FormGroup,Validator,Validators } from '@angular/forms';
+import * as Icons from '@fortawesome/free-solid-svg-icons';
 import { ToastrService } from 'ngx-toastr';
 import { RequestDto } from 'src/app/models/RequestDto';
-import { PartsService } from '../../../services/parts.service';
+import ValidateForm from 'src/app/helper/validateform';
+import { CommonVariables } from 'src/app/components/common/Statics';
 
 @Component({
   selector: 'app-part-declaration',
@@ -24,12 +26,12 @@ export class PartDeclarationComponent implements OnInit {
   totalParts:any;
   editpart:boolean=false;
   partid:number=0;
-  constructor(private partsService:PartsService,private fb:FormBuilder,private toastr:ToastrService) { }
+  constructor(private partsService:PartsService,private fb:FormBuilder,private toastr:ToastrService,private statics:CommonVariables) { }
 
   ngOnInit(): void {
     this.partform=this.fb.group({
-      partname:['',Validators.required],
-      partnumber:['',Validators.required],
+      partName:['',Validators.required],
+      partNumber:['',Validators.required],
       status:['',Validators.required]
     });
     this.GetParts();
@@ -41,6 +43,7 @@ export class PartDeclarationComponent implements OnInit {
  }
 
   GetParts(){
+    debugger;
     var request=new RequestDto();
     request.SearchKey='';
     request.Page=this.p;
@@ -48,6 +51,7 @@ export class PartDeclarationComponent implements OnInit {
     this.partsService.GetParts(request)
     .subscribe((res:any)=>{
       this.totalParts=res.rowCount;
+      
       this.partlist=res;
     });
   }
@@ -57,11 +61,11 @@ export class PartDeclarationComponent implements OnInit {
         .subscribe({
           next:(res:any)=>{
             this.GetParts(); 
-            this.toastr.success('Change Status was Successfull','Success');
+            this.toastr.success(this.statics.CHANGE_STATUS_OK,'Success');
           },
           error:(res:any)=>{
             this.GetParts();
-            this.toastr.error('Change Status was Faild','Error');
+            this.toastr.error(this.statics.CHANGE_STATUS_FAILD,'Error');
           }
         })
   }
@@ -87,7 +91,8 @@ export class PartDeclarationComponent implements OnInit {
             this.editpart=true;
             this.partid=id;
             this.partform.setValue({
-                  name:res.name,
+                  partName:res.partName,
+                  partNumber:res.partNumber,
                   status:res.status
 
             });
@@ -102,18 +107,19 @@ export class PartDeclarationComponent implements OnInit {
   if(this.editpart==false){
     if(this.partform.valid){
       this.data={
-        name:this.partform.value.name,
-        status:this.partform.value.status,
+        partName:this.partform.value.partName,
+        partNumber:this.partform.value.partNumber,
+        status:this.partform.value.status
       }
        this.partsService.RegisterPart(this.data)
        .subscribe({
             next:(res)=>{
-              this.roleform.reset();
+              this.partform.reset();
               this.GetParts();
-              this.toastr.success('Register was Successfull','Alert');
+              this.toastr.success(this.statics.REGISTER,'Alert');
             },
             error:(res)=>{
-              
+
               this.toastr.error('Register was Faild','Alert');
             }
        });
@@ -122,10 +128,11 @@ export class PartDeclarationComponent implements OnInit {
       this.toastr.warning('Please Fill All Fields','Alert');
     }
   }else{
-    if(this.partsService.valid){
+    if(this.partform.valid){
       this.data={
-        name:this.partsService.value.name,
-        status:this.partsService.value.status,
+        partName:this.partform.value.partName,
+        partNumber:this.partform.value.partNumber,
+        status:this.partform.value.status,
         id:this.partid
       }
        this.partsService.Edit(this.data)

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RolesService } from '../../../../services/roles.service';
 import { FormBuilder, FormGroup,Validator,Validators } from '@angular/forms';
+import * as Icons from '@fortawesome/free-solid-svg-icons';
 import { ToastrService } from 'ngx-toastr';
 import { RequestDto } from 'src/app/models/RequestDto';
-import * as Icons from '@fortawesome/free-solid-svg-icons';
 import ValidateForm from 'src/app/helper/validateform';
 
 

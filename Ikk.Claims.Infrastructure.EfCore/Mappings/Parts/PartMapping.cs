@@ -1,4 +1,5 @@
-﻿using Ikk.Claims.Domain.Enities.Parts;
+﻿using Ikk.Claims.Domain.Enities.Claems;
+using Ikk.Claims.Domain.Enities.Parts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -17,6 +18,7 @@ namespace Ikk.Claims.Infrastructure.EfCore.Mappings.Parts
             builder.Property(x => x.Status);
             builder.Property(x => x.PartName);
             builder.Property(x => x.PartNumber);
+            builder.HasMany(x => x.ClaemInParts).WithOne(x => x.Part).HasForeignKey(x => x.PartId);
         }
     }
 }

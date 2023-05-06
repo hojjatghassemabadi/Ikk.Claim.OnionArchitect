@@ -1,5 +1,6 @@
 ﻿using Ikk.Claims.Common.Entieties;
 using Ikk.Claims.Domain.Enities.Batchs;
+using Ikk.Claims.Domain.Enities.CarInBaches;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,7 @@ namespace Ikk.Claims.Domain.Enities.TypeCars
     {
         public string Name { get; private set; }
         public bool Status { get; private set; }
-        public long BatchId { get; set; }
-        public Batch Batch { get; set; }
+        public ICollection<CarInBatch> CarInBatches{ get; set; }
 
         protected TypeCar()
         {

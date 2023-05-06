@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardModule } from './components/dashboard/dashboard.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CalendarModule, DatePickerModule, TimePickerModule, DateRangePickerModule, DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     ReactiveFormsModule,
     DashboardModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    CalendarModule, DatePickerModule, TimePickerModule, DateRangePickerModule, DateTimePickerModule, NgbModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

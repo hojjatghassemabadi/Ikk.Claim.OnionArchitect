@@ -6,7 +6,7 @@
                         <div class="col-md-4">
                           <label for="validationCustomUsername" class="form-label">Part Name</label>
                           <div class="input-group has-validation">
-                            <input type="text" class="form-control" id="validationCustomUsername" formControlName="partname" aria-describedby="inputGroupPrepend" required>
+                            <input type="text" class="form-control" id="validationCustomUsername" formControlName="partName" aria-describedby="inputGroupPrepend" required>
                             <div class="invalid-feedback">
                               Please Enter a name of part.
                             </div>
@@ -15,7 +15,7 @@
                         <div class="col-md-4">
                                 <label for="validationCustomUsername" class="form-label">Part Number</label>
                                 <div class="input-group has-validation">
-                                  <input type="text" class="form-control" id="validationCustomUsername" formControlName="partnumber" aria-describedby="inputGroupPrepend" required>
+                                  <input type="text" class="form-control" id="validationCustomUsername" formControlName="partNumber" aria-describedby="inputGroupPrepend" required>
                                   <div class="invalid-feedback">
                                     Please Enter a code of part.
                                   </div>
@@ -33,7 +33,7 @@
                           </div>
                         </div>
                         <div class="col-12">
-                          <button class="btn btn-primary" type="submit" (click)="onSubmit()"><span *ngIf="editrole">Edit form</span><span  *ngIf="!editrole">Submit form</span></button>
+                          <button class="btn btn-primary" type="submit" (click)="onSubmit()"><span *ngIf="editpart">Edit form</span><span  *ngIf="!editpart">Submit form</span></button>
                         </div>
                    
                 </form>
@@ -45,19 +45,21 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Role Name</th>
+                    <th>Part Name</th>
+                    <th>Part Number</th>
                     <th>Status</th>
                     <th>Operation</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let role of rolelist| paginate: { itemsPerPage: itemPerPage, currentPage: p, totalItems: totalRoles }">
-                    <td>{{role.id}}</td>
-                    <td>{{role.name}}</td>
-                    <td class="warning"><a class="pointer" (click)="changeStatus(role.id)"><fa-icon *ngIf="role.status" class="green" [icon]="checked"></fa-icon><fa-icon class="red" *ngIf="!role.status" [icon]="notchecked"></fa-icon></a></td>
+                <tr *ngFor="let part of partlist| paginate: { itemsPerPage: itemPerPage, currentPage: p, totalItems: totalParts }">
+                    <td>{{part.id}}</td>
+                    <td>{{part.partName}}</td>
+                    <td>{{part.partNumber}}</td>
+                    <td class="warning"><a class="pointer" (click)="changeStatus(part.id)"><fa-icon *ngIf="part.status" class="green" [icon]="checked"></fa-icon><fa-icon class="red" *ngIf="!part.status" [icon]="notchecked"></fa-icon></a></td>
                     <td class="primary">
-                        <a class="pointer" (click)="delete(role.id)"><fa-icon  class="red pointer" [icon]="crash"></fa-icon></a>
-                        <a class="pointer" (click)="get(role.id)"><fa-icon  class="green pointer" [icon]="edit"></fa-icon></a>
+                        <a class="pointer" (click)="delete(part.id)"><fa-icon  class="red pointer" [icon]="crash"></fa-icon></a>
+                        <a class="pointer" (click)="get(part.id)"><fa-icon  class="green pointer" [icon]="edit"></fa-icon></a>
                     </td>
                 </tr>
             </tbody>

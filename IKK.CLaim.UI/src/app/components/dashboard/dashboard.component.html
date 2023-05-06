@@ -3,94 +3,74 @@
         <div class="top">
             <div class="logo">
                 <img src="../../../assets/images/logo.png" >
-                <h2>Claim<span class="danger">Haima</span></h2>
+                <h2>Haima<span class="danger">Claim</span></h2>
             </div>
             <div class="close" id="close-btn" (click)="closeMenu()">
                 <span class="fa-stack fa-lg"><i class="fa fa-close fa-stack-1x"></i></span>
             </div>
         </div>
         <div class="sidebar">
-            <a routerLink="users" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <i class="fa fa-dashboard fa-stack-1x"></i>
-                    </span>
-                    <h3>Users</h3>
-            </a>
-            <a routerLink="roles" routerLinkActive="active" >
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <i class="fa fa-user fa-stack-1x"></i>
-                </span>
-                <h3>Rols</h3>
-            </a>
-            <a routerLink="Access" routerLinkActive="active">
+            <a routerLink="baseInfo" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
                         <i class="fa fa-user fa-stack-1x"></i>
                     </span>
-                    <h3>Access Management</h3>
+                    <h3>Base Info Management</h3>
             </a>
-            <a routerLink="PartDeclaration" routerLinkActive="active">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <i class="fa fa-user fa-stack-1x"></i>
-                </span>
-                <h3>Parts Declaration</h3>
-            </a>  
-            <a routerLink="BatchNumber" routerLinkActive="active">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <i class="fa fa-user fa-stack-1x"></i>
-                </span>
-                <h3>Batch numbers</h3>
-            </a>   
+           
             <a routerLink="RegisterClaim" routerLinkActive="active">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <i class="fa fa-user fa-stack-1x"></i>
+                    <i class="fa fa-list-alt fa-stack-1x"></i>
                 </span>
-                <h3>Register Claim</h3>
+                <h3>Register Claim Card</h3>
             </a>  
             <a routerLink="RegisterCKDQR" routerLinkActive="active">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <i class="fa fa-user fa-stack-1x"></i>
+                    <i class="fa fa-file-text fa-stack-1x"></i>
                 </span>
                 <h3>Register CKDQR</h3>
             </a> 
+            <a routerLink="AnalyzCKDQR" routerLinkActive="active">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-edit fa-stack-1x"></i>
+                    </span>
+                    <h3>Analyz CKDQR</h3>
+                </a> 
             <a routerLink="RegisterCCLRCL" routerLinkActive="active">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <i class="fa fa-user fa-stack-1x"></i>
+                    <i class="fa fa-clone fa-stack-1x"></i>
                 </span>
                 <h3>Register CCL/RCL</h3>
             </a>   
             <a routerLink="RegisterPackingList" routerLinkActive="active">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <i class="fa fa-user fa-stack-1x"></i>
+                    <i class="fa fa-truck fa-stack-1x"></i>
                 </span>
                 <h3>Register Packing List</h3>
             </a>     
             <a routerLink="users9" routerLinkActive="active">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <i class="fa fa-user fa-stack-1x"></i>
+                    <i class="fa fa-th-list fa-stack-1x"></i>
                 </span>
                 <h3>Reports</h3>
             </a>                       
             <a routerLink="users13" routerLinkActive="active">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <i class="fa fa-user fa-stack-1x"></i>
+                    <i class="fa fa-tasks fa-stack-1x"></i>
                 </span>
                 <h3>Cartable</h3>
             </a>                    
             <a routerLink="users23" routerLinkActive="active">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
-                        <i class="fa fa-user fa-stack-1x"></i>
+                        <i class="fa fa-sign-out fa-stack-1x"></i>
                     </span>
                     <h3>Logout</h3>
             </a>            
@@ -113,7 +93,7 @@
                 
                 <div class="profile">
                     <div class="info">
-                        <p>Hey, <b>Daniel</b></p>
+                        <p>Hey, <b>Ghasemabadi</b></p>
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">

@@ -24,12 +24,13 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
-  
+    
     if(this.loginForm.valid){
        this.auth.signIn(this.loginForm.value)
        .subscribe({
          next:(res)=>{
           this.loginForm.reset();
+         
          // this.toast.showSuccess("Login is successfully !!", "");
         // this.toastService.show('I am a standard toast');
           this.auth.storeToken(res.token);

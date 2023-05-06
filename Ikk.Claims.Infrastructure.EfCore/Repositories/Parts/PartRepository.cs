@@ -12,8 +12,8 @@ namespace Ikk.Claims.Infrastructure.EfCore.Repositories.Parts
 {
     public class PartRepository : BaseRepository<long, Part>, IPartRepository
     {
-        private readonly ClaimContext _context;
-        public PartRepository(ClaimContext context) : base(context)
+        private readonly ClaemContext _context;
+        public PartRepository(ClaemContext context) : base(context)
         {
         }
     }

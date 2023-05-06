@@ -14,8 +14,8 @@ namespace Ikk.Claims.Infrastructure.EfCore.Repositories.TypeCars
 {
     public class TypeCarRepository : BaseRepository<long, TypeCar>, ITypeCarRepository
     {
-        private readonly ClaimContext _context;
-        public TypeCarRepository(ClaimContext context) : base(context)
+        private readonly ClaemContext _context;
+        public TypeCarRepository(ClaemContext context) : base(context)
         {
             _context = context;
         }

@@ -9,7 +9,7 @@ namespace Ikk.Claims.Application.Contracts.BatchContract
 {
     public interface IBatchApplication
     {
-        List<GetBatchViewModel> List(RequestDto request);
+        ResultGetBatches List(RequestDto request);
         void Create(RegisterBatchViewModel command);
         void Edit(EditBatchViewModel command);
         GetBatchViewModel Get(long id);

@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl:string="https://localhost:7073/Claim/Login"
+  private baseUrl:string="https://localhost:7073/Claem/Login"
   constructor(private http:HttpClient,private router:Router) {
 
    }

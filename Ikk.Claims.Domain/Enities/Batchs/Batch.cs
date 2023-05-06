@@ -1,19 +1,16 @@
 ﻿using Ikk.Claims.Common.Entieties;
-using Ikk.Claims.Domain.Enities.TypeCars;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Ikk.Claims.Domain.Enities.CarInBaches;
+using Ikk.Claims.Domain.Enities.Claems;
 
 namespace Ikk.Claims.Domain.Enities.Batchs
 {
-    public class Batch:BaseEntity
+    public class Batch : BaseEntity
     {
         public string Name { get; private set; }
         public bool Status { get; private set; }
-        public long TypecarId { get; set; }
-        public TypeCar TypeCar{ get; set; }
+        public long CarInBatchId { get; set; }
+        public ICollection<Claem> Claims { get; set; }
+        public ICollection<CarInBatch> CarInBatchs { get; set; }
 
         protected Batch()
         {
